@@ -1,7 +1,8 @@
 from tkinter import *
+from user_input import User_Input
 
 
-class Labels(Label):
+class Labels(Label, User_Input):
 
     def __init__(self, **kwargs):
         super().__init__()
