@@ -1,8 +1,10 @@
 from tkinter import *
-from user_input import User_Input
+
+PADDING_X = 20
+PADDING_Y = 20
 
 
-class Labels(Label, User_Input):
+class Labels(Label):
 
     def __init__(self, **kwargs):
         super().__init__()
@@ -15,4 +17,4 @@ class Labels(Label, User_Input):
         # setting up default config of the button
         self.config(text=self.text, font=(self.font, self.size, self.style))
         self.grid(column=self.column, row=self.row)
-        self.config(padx=20, pady=20)
+        self.config(padx=PADDING_X, pady=PADDING_Y)
