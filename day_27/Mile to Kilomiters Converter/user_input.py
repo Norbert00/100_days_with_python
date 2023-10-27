@@ -1,5 +1,7 @@
 from tkinter import *
 
+CONVERSION_RATE = 1.6
+
 
 class User_Input(Entry):
     def __init__(self, **kwargs):
@@ -7,4 +9,13 @@ class User_Input(Entry):
         self.column = kwargs.get("column")
         self.row = kwargs.get("row")
         self.grid(column=self.column, row=self.row)
-        self.user_info = self.get()
+        self.info = 0
+        self.kilometer = 0
+
+    def set_data(self):
+        self.info = self.get()
+        print(self.info)
+
+    # Fix an issue with converting mile to kilometer
+    def convert_mile_to_kilometer(self):
+        self.kilometer = int(self.info) * CONVERSION_RATE
