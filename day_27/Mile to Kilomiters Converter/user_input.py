@@ -3,7 +3,7 @@ from tkinter import *
 CONVERSION_RATE = 1.6
 
 
-class User_Input(Entry):
+class UserInput(Entry):
     def __init__(self, **kwargs):
         super().__init__()
         self.column = kwargs.get("column")
