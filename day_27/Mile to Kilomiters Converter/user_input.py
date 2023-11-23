@@ -14,8 +14,8 @@ class UserInput(Entry):
 
     def set_data(self):
         self.info = self.get()
-        print(self.info)
-
-    # Fix an issue with converting mile to kilometer
-    def convert_mile_to_kilometer(self):
         self.kilometer = int(self.info) * CONVERSION_RATE
+        self.kilometer = round(self.kilometer, 2)
+
+    def update_converted_label(self, label):
+        label.config(text=f"{self.kilometer}")
